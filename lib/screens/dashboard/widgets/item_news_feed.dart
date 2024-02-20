@@ -7,8 +7,8 @@ class ItemNewsFeed extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 200,
-      margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+      height: 170,
+      margin: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
         image: DecorationImage(

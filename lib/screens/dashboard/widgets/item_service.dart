@@ -14,10 +14,8 @@ class ItemService extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
         boxShadow: [
           BoxShadow(
-            offset: const Offset(0, 5),
             color: Theme.of(context).colorScheme.primary.withOpacity(.2),
-            spreadRadius: 5,
-            blurRadius: 5
+            blurRadius: 10
           )
         ]
       ),
@@ -26,13 +24,8 @@ class ItemService extends StatelessWidget {
         children: [
           Container(
             padding: const EdgeInsets.all(15),
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              color: Theme.of(context).colorScheme.primary.withOpacity(.1)
-            ),
             child: Image.asset(image, height: 40, width: 40),
           ),
-          const SizedBox(height: 5),
           Text(title, style: Theme.of(context).textTheme.titleSmall, textAlign: TextAlign.center)
         ],
       ),
