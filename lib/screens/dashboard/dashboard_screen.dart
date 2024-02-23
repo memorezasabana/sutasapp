@@ -56,19 +56,18 @@ class DashboardScreen extends StatelessWidget {
                   ],
                 ),
                 child: ListTile(
-                  title: const Text(
-                    "Halo Sobat Sutas!",
-                    style: TextStyle(
-                      fontSize: 22,
+                    title: const Text(
+                      "Halo Sobat Sutas!",
+                      style: TextStyle(
+                        fontSize: 22,
+                      ),
                     ),
-                  ),
-                  subtitle: Text("Ayo tanggap bencana!"),
-                  trailing: SizedBox(
-                    height: 50,
-                    width: 50,
-                    child: Image.asset("assets/images/logo.png"),
-                  )
-                ),
+                    subtitle: Text("Ayo tanggap bencana!"),
+                    trailing: SizedBox(
+                      height: 50,
+                      width: 50,
+                      child: Image.asset("assets/images/logo.png"),
+                    )),
               ),
             ],
           ),
@@ -102,8 +101,7 @@ class DashboardScreen extends StatelessWidget {
                         title: 'Panduan\nEvakuasi',
                         image: 'assets/images/panduan.png'),
                     ItemService(
-                        title: 'Kabar\nSutas',
-                        image: 'assets/images/news.png'),
+                        title: 'Kabar\nSutas', image: 'assets/images/news.png'),
                     ItemService(
                         title: 'Video\nEdukasi',
                         image: 'assets/images/video.png'),
@@ -115,6 +113,20 @@ class DashboardScreen extends StatelessWidget {
                 padding: const EdgeInsets.only(left: 30),
                 child: Text('Kabar Sutas',
                     style: Theme.of(context).textTheme.titleLarge),
+              ),
+              SizedBox(height: 20),
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: 32),
+                child: const TextField(
+                  autocorrect: false,
+                  decoration: InputDecoration(
+                    contentPadding: EdgeInsets.symmetric(horizontal: 15),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(50))),
+                    hintText: "Cari berita yang anda inginkan disini",
+                    prefixIcon: Icon(Icons.search),
+                  ),
+                ),
               ),
               SizedBox(height: 10),
               const Column(
