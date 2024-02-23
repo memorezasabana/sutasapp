@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:sutasapp/screens/dashboard/widgets/item_news_feed.dart';
-import 'package:sutasapp/screens/dashboard/widgets/item_service.dart';
+import 'package:sutasapp/screens/pages/page_kabar.dart';
+import 'package:sutasapp/screens/pages/page_kontak.dart';
+import 'package:sutasapp/screens/pages/page_lapor.dart';
+import 'package:sutasapp/screens/pages/page_panduan.dart';
+import 'package:sutasapp/screens/pages/page_video.dart';
 
 class DashboardScreen extends StatelessWidget {
   const DashboardScreen({Key? key}) : super(key: key);
@@ -90,21 +94,61 @@ class DashboardScreen extends StatelessWidget {
                   padding: const EdgeInsets.only(
                       top: 5, bottom: 10, left: 20, right: 20),
                   scrollDirection: Axis.horizontal,
-                  children: const [
-                    ItemService(
-                        title: 'Lapor\nBencana',
-                        image: 'assets/images/report.png'),
-                    ItemService(
-                        title: 'Kontak\nDarurat',
-                        image: 'assets/images/call.png'),
-                    ItemService(
-                        title: 'Panduan\nEvakuasi',
-                        image: 'assets/images/panduan.png'),
-                    ItemService(
-                        title: 'Kabar\nSutas', image: 'assets/images/news.png'),
-                    ItemService(
-                        title: 'Video\nEdukasi',
-                        image: 'assets/images/video.png'),
+                  children: [
+                    InkWell(
+                      onTap: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) {
+                            return const PageLapor();
+                          },
+                        ));
+                      },
+                      child:
+                          layanan("Lapor\nBencana", "assets/images/report.png"),
+                    ),
+                    InkWell(
+                      onTap: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) {
+                            return const PageKontak();
+                          },
+                        ));
+                      },
+                      child:
+                          layanan("Kontak\nDarurat", "assets/images/call.png"),
+                    ),
+                    InkWell(
+                      onTap: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) {
+                            return const PagePanduan();
+                          },
+                        ));
+                      },
+                      child: layanan(
+                          "Panduan\nEvakuasi", "assets/images/panduan.png"),
+                    ),
+                    InkWell(
+                      onTap: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) {
+                            return const PageKabar();
+                          },
+                        ));
+                      },
+                      child: layanan("Kabar\nSutas", "assets/images/news.png"),
+                    ),
+                    InkWell(
+                      onTap: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) {
+                            return const PageVideo();
+                          },
+                        ));
+                      },
+                      child:
+                          layanan("Video\nEdukasi", "assets/images/video.png"),
+                    ),
                   ],
                 ),
               ),
@@ -116,7 +160,7 @@ class DashboardScreen extends StatelessWidget {
               ),
               SizedBox(height: 20),
               Container(
-                margin: EdgeInsets.symmetric(horizontal: 32),
+                margin: EdgeInsets.only(left: 30, right: 33),
                 child: const TextField(
                   autocorrect: false,
                   decoration: InputDecoration(
@@ -145,6 +189,35 @@ class DashboardScreen extends StatelessWidget {
           ),
         )
       ]),
+    );
+  }
+
+  layanan(String title, String image) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+      margin: const EdgeInsets.symmetric(horizontal: 10),
+      decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(20),
+          boxShadow: const [BoxShadow(blurRadius: 3)]),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Column(
+            children: [
+              Container(
+                padding: const EdgeInsets.all(15),
+                child: Image.asset(image, height: 40, width: 40),
+              ),
+              Text(
+                title,
+                textAlign: TextAlign.center,
+                style: TextStyle(fontWeight: FontWeight.w500),
+              ),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }
