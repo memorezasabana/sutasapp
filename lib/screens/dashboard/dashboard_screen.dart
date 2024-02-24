@@ -65,9 +65,11 @@ class DashboardScreen extends StatelessWidget {
                       "Halo Sobat Sutas!",
                       style: TextStyle(
                         fontSize: 22,
+                        fontFamily: "Product",
                       ),
                     ),
-                    subtitle: Text("Ayo tanggap bencana!"),
+                    subtitle: const Text("Ayo tanggap bencana!",
+                    style: TextStyle(fontFamily: "Product"),),
                     trailing: SizedBox(
                       height: 50,
                       width: 50,

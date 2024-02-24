@@ -96,7 +96,7 @@ fonts:
     - family: Product
       fonts:
         - asset: assets/fonts/ProductSans-Medium.ttf
-        - asset: assets/fonts/ProductSans-Bold.ttf
+        # - asset: assets/fonts/ProductSans-Bold.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
