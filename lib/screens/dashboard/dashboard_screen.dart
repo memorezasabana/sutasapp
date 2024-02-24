@@ -14,6 +14,7 @@ class DashboardScreen extends StatelessWidget {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         // leading: Padding(
         //   padding: const EdgeInsets.only(left: 15, right: 10),
         //   child: Image.asset('assets/images/menu.png', color: Colors.white),
