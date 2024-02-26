@@ -71,7 +71,7 @@ class _LoginPageState extends State<LoginPage> {
                         _buildGreyText("Please login with your information"),
                         const SizedBox(height: 20),
                         TextField(
-                          controller: passwordController,
+                          controller: emailController,
                           decoration: InputDecoration(
                             prefixIcon: const Icon(Icons.person),
                             hintText: 'Masukkan Username Anda disini',
@@ -94,10 +94,18 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                         const SizedBox(height: 20),
                         TextField(
-                          controller: emailController,
-                          obscureText: true,
+                          controller: passwordController,
+                          obscureText: securText,
                           decoration: InputDecoration(
-                            suffixIcon: const Icon(Icons.remove_red_eye),
+                            suffixIcon: IconButton(
+                                onPressed: () {
+                                  setState(() {
+                                    securText = !securText;
+                                  });
+                                },
+                                icon: Icon(securText
+                                    ? Icons.visibility_off
+                                    : Icons.visibility)),
                             prefixIcon: const Icon(Icons.lock),
                             hintText: 'Masukkan Password Anda disini',
                             labelText: 'Password',
