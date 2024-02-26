@@ -96,21 +96,21 @@ class _LoginPageState extends State<LoginPage> {
                         TextField(
                           controller: emailController,
                           obscureText: true,
-                          decoration: const InputDecoration(
-                            suffixIcon: Icon(Icons.remove_red_eye),
-                            prefixIcon: Icon(Icons.lock),
+                          decoration: InputDecoration(
+                            suffixIcon: const Icon(Icons.remove_red_eye),
+                            prefixIcon: const Icon(Icons.lock),
                             hintText: 'Masukkan Password Anda disini',
                             labelText: 'Password',
                             contentPadding:
-                                EdgeInsets.symmetric(horizontal: 20),
+                                const EdgeInsets.symmetric(horizontal: 20),
                             focusedBorder: OutlineInputBorder(
-                              borderSide: BorderSide(
+                              borderSide: const BorderSide(
                                 color: Colors.indigo,
                               ),
                               borderRadius: BorderRadius.circular(50.0),
                             ),
                             enabledBorder: OutlineInputBorder(
-                              borderSide: BorderSide(
+                              borderSide: const BorderSide(
                                 color: Colors.black,
                               ),
                               borderRadius: BorderRadius.circular(50.0),
