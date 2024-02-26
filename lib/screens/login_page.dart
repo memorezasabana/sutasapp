@@ -5,12 +5,23 @@ void main() {
   runApp(LoginPage());
 }
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
   LoginPage({super.key});
+
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  bool securText = true;
   late Color myColor;
+
   late Size mediaSize;
+
   TextEditingController emailController = TextEditingController();
+
   TextEditingController passwordController = TextEditingController();
+
   bool rememberUser = false;
 
   @override
@@ -85,21 +96,21 @@ class LoginPage extends StatelessWidget {
                         TextField(
                           controller: emailController,
                           obscureText: true,
-                          decoration: InputDecoration(
-                            suffixIcon: const Icon(Icons.remove_red_eye),
-                            prefixIcon: const Icon(Icons.lock),
+                          decoration: const InputDecoration(
+                            suffixIcon: Icon(Icons.remove_red_eye),
+                            prefixIcon: Icon(Icons.lock),
                             hintText: 'Masukkan Password Anda disini',
                             labelText: 'Password',
                             contentPadding:
-                                const EdgeInsets.symmetric(horizontal: 20),
+                                EdgeInsets.symmetric(horizontal: 20),
                             focusedBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(
+                              borderSide: BorderSide(
                                 color: Colors.indigo,
                               ),
                               borderRadius: BorderRadius.circular(50.0),
                             ),
                             enabledBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(
+                              borderSide: BorderSide(
                                 color: Colors.black,
                               ),
                               borderRadius: BorderRadius.circular(50.0),
@@ -149,65 +160,6 @@ class LoginPage extends StatelessWidget {
   }
 
   // Widget _buildBottom() {
-  //   return SizedBox(
-  //     width: mediaSize.width,
-  //     child: Card(
-  //       shape: const RoundedRectangleBorder(
-  //           borderRadius: BorderRadius.only(
-  //         topLeft: Radius.circular(30),
-  //         topRight: Radius.circular(30),
-  //       )),
-  //       child: Padding(
-  //         padding: const EdgeInsets.all(32.0),
-  //         child: _buildForm(),
-  //       ),
-  //     ),
-  //   );
-  // }
-
-  // Widget _buildForm(BuildContext context) {
-  //   return Column(
-  //     crossAxisAlignment: CrossAxisAlignment.start,
-  //     children: [
-  //       Text(
-  //         "Selamat Datang,",
-  //         style: TextStyle(
-  //             color: myColor, fontSize: 32, fontWeight: FontWeight.w500),
-  //       ),
-  //       _buildGreyText("Please login with your information"),
-  //       const SizedBox(height: 20),
-  //       _buildGreyText("Email address"),
-  //       _buildInputField(emailController),
-  //       const SizedBox(height: 10),
-  //       _buildGreyText("Password"),
-  //       _buildInputField(passwordController, isPassword: true),
-  //       const SizedBox(height: 40),
-  //       ElevatedButton(
-  //         onPressed: () {
-  //           debugPrint("Email : ${emailController.text}");
-  //           debugPrint("Password : ${passwordController.text}");
-  //           Navigator.of(context).push(MaterialPageRoute(
-  //             builder: (context) {
-  //               return const DashboardScreen();
-  //             },
-  //           ));
-  //         },
-  //         style: ElevatedButton.styleFrom(
-  //           shape: const StadiumBorder(),
-  //           backgroundColor: Colors.indigo,
-  //           elevation: 20,
-  //           shadowColor: myColor,
-  //           minimumSize: const Size.fromHeight(60),
-  //         ),
-  //         child: const Text(
-  //           "LOGIN",
-  //           style: TextStyle(color: Colors.white),
-  //         ),
-  //       ),
-  //     ],
-  //   );
-  // }
-
   Widget _buildGreyText(String text) {
     return Text(
       text,
@@ -228,24 +180,4 @@ class LoginPage extends StatelessWidget {
       obscureText: isPassword,
     );
   }
-
-  // Widget _buildLoginButton(BuildContext context) {
-  //   return ElevatedButton(
-  //     onPressed: () {
-  //       debugPrint("Email : ${emailController.text}");
-  //       debugPrint("Password : ${passwordController.text}");
-  //     },
-  //     style: ElevatedButton.styleFrom(
-  //       shape: const StadiumBorder(),
-  //       backgroundColor: Colors.indigo,
-  //       elevation: 20,
-  //       shadowColor: myColor,
-  //       minimumSize: const Size.fromHeight(60),
-  //     ),
-  //     child: const Text(
-  //       "LOGIN",
-  //       style: TextStyle(color: Colors.white),
-  //     ),
-  //   );
-  // }
 }
