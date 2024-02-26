@@ -46,7 +46,7 @@ class DashboardScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                margin: EdgeInsets.only(right: 20, left: 20),
+                margin: const EdgeInsets.only(right: 20, left: 20),
                 height: 100,
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
@@ -54,7 +54,7 @@ class DashboardScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20),
                   boxShadow: [
                     BoxShadow(
-                        offset: Offset(0, 5),
+                        offset: const Offset(0, 5),
                         color: Colors.teal.shade400.withOpacity(.2),
                         spreadRadius: 2,
                         blurRadius: 10)
@@ -65,11 +65,11 @@ class DashboardScreen extends StatelessWidget {
                       "Halo Sobat Sutas!",
                       style: TextStyle(
                         fontSize: 22,
-                        fontFamily: "Product",
                       ),
                     ),
-                    subtitle: const Text("Ayo tanggap bencana!",
-                    style: TextStyle(fontFamily: "Product"),),
+                    subtitle: const Text(
+                      "Ayo tanggap bencana!",
+                    ),
                     trailing: SizedBox(
                       height: 50,
                       width: 50,
@@ -161,9 +161,9 @@ class DashboardScreen extends StatelessWidget {
                 child: Text('Kabar Sutas',
                     style: Theme.of(context).textTheme.titleLarge),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Container(
-                margin: EdgeInsets.only(left: 30, right: 33),
+                margin: const EdgeInsets.only(left: 30, right: 33),
                 child: const TextField(
                   autocorrect: false,
                   decoration: InputDecoration(
@@ -175,7 +175,7 @@ class DashboardScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               const Column(
                 children: [
                   ItemNewsFeed(
@@ -215,7 +215,7 @@ class DashboardScreen extends StatelessWidget {
               Text(
                 title,
                 textAlign: TextAlign.center,
-                style: TextStyle(fontWeight: FontWeight.w500),
+                style: const TextStyle(fontWeight: FontWeight.w500),
               ),
             ],
           ),

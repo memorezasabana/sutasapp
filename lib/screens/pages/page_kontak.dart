@@ -8,7 +8,7 @@ class PageKontak extends StatelessWidget {
     return Scaffold(
         extendBodyBehindAppBar: true,
         appBar: AppBar(
-          title: Text("Page Kontak"),
+          title: const Text("Page Kontak"),
           backgroundColor: Colors.indigo,
         ));
   }

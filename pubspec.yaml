@@ -92,7 +92,7 @@ flutter:
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro
-fonts:
+  fonts:
     - family: Product
       fonts:
         - asset: assets/fonts/ProductSans-Medium.ttf

@@ -8,7 +8,7 @@ class PageVideo extends StatelessWidget {
     return Scaffold(
         extendBodyBehindAppBar: true,
         appBar: AppBar(
-          title: Text("Page Video"),
+          title: const Text("Page Video"),
           backgroundColor: Colors.indigo,
         ));
   }

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:sutasapp/screens/dashboard/dashboard_screen.dart';
 import 'package:sutasapp/screens/login_page.dart';
 
 void main() {

@@ -8,7 +8,7 @@ class PageKabar extends StatelessWidget {
     return Scaffold(
         extendBodyBehindAppBar: true,
         appBar: AppBar(
-          title: Text("Page Kabar"),
+          title: const Text("Page Kabar"),
           backgroundColor: Colors.indigo,
         ));
   }

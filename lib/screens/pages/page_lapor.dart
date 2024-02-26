@@ -8,7 +8,7 @@ class PageLapor extends StatelessWidget {
     return Scaffold(
         extendBodyBehindAppBar: true,
         appBar: AppBar(
-          title: Text("Page Lapor"),
+          title: const Text("Page Lapor"),
           backgroundColor: Colors.indigo,
         ));
   }
