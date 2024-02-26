@@ -55,11 +55,49 @@ class LoginPage extends StatelessWidget {
                         ),
                         _buildGreyText("Please login with your information"),
                         const SizedBox(height: 20),
-                        _buildGreyText("Email address"),
-                        _buildInputField(emailController,isPassword: true),
-                        const SizedBox(height: 10),
-                        _buildGreyText("Password"),
-                        _buildInputField(passwordController, isPassword: true),
+                        TextField(
+                          controller: emailController,
+                          decoration: const InputDecoration(
+                            prefixIcon: Icon(Icons.person),
+                            hintText: 'Masukkan Username Anda disini',
+                            labelText: 'Username',
+                            contentPadding:
+                                EdgeInsets.symmetric(horizontal: 20),
+                            focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                color: Colors.indigo,
+                              ),
+                            ),
+                            enabledBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                color: Colors.black,
+                              ),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(height: 20),
+                        TextField(
+                          controller: emailController,
+                          obscureText: true,
+                          decoration: const InputDecoration(
+                            suffixIcon: Icon(Icons.remove_red_eye),
+                            prefixIcon: Icon(Icons.lock),
+                            hintText: 'Masukkan Password Anda disini',
+                            labelText: 'Password',
+                            contentPadding:
+                                EdgeInsets.symmetric(horizontal: 20),
+                            focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                color: Colors.indigo,
+                              ),
+                            ),
+                            enabledBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                color: Colors.black,
+                              ),
+                            ),
+                          ),
+                        ),
                         const SizedBox(height: 40),
                         InkWell(
                           onTap: () {
