@@ -56,7 +56,7 @@ class LoginPage extends StatelessWidget {
                         _buildGreyText("Please login with your information"),
                         const SizedBox(height: 20),
                         TextField(
-                          controller: emailController,
+                          controller: passwordController,
                           decoration: const InputDecoration(
                             prefixIcon: Icon(Icons.person),
                             hintText: 'Masukkan Username Anda disini',
