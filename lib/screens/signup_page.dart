@@ -1,19 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:sutasapp/screens/dashboard/dashboard_screen.dart';
-import 'package:sutasapp/screens/signup_page.dart';
 
-void main() {
-  runApp(LoginPage());
-}
-
-class LoginPage extends StatefulWidget {
-  LoginPage({super.key});
+class SignPage extends StatefulWidget {
+  const SignPage({super.key});
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<SignPage> createState() => _SignPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _SignPageState extends State<SignPage> {
   bool securText = true;
   bool rememberUser = false;
   late Color myColor;
@@ -92,7 +87,30 @@ class _LoginPageState extends State<LoginPage> {
                             ),
                           ),
                         ),
-                        const SizedBox(height: 10),
+                        SizedBox(height: 20),
+                        TextField(
+                          controller: emailController,
+                          decoration: InputDecoration(
+                            prefixIcon: const Icon(Icons.person),
+                            hintText: 'Masukkan Username Anda disini',
+                            labelText: 'Username',
+                            contentPadding:
+                                const EdgeInsets.symmetric(horizontal: 20),
+                            focusedBorder: OutlineInputBorder(
+                              borderSide: const BorderSide(
+                                color: Colors.indigo,
+                              ),
+                              borderRadius: BorderRadius.circular(50.0),
+                            ),
+                            enabledBorder: OutlineInputBorder(
+                              borderSide: const BorderSide(
+                                color: Colors.black,
+                              ),
+                              borderRadius: BorderRadius.circular(50.0),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(height: 20),
                         TextFormField(
                           validator: (value) {
                             if (value == null || value.isEmpty) {
