@@ -14,6 +14,7 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   bool securText = true;
+  bool rememberUser = false;
   late Color myColor;
 
   late Size mediaSize;
@@ -21,8 +22,6 @@ class _LoginPageState extends State<LoginPage> {
   TextEditingController emailController = TextEditingController();
 
   TextEditingController passwordController = TextEditingController();
-
-  bool rememberUser = false;
 
   @override
   Widget build(BuildContext context) {
@@ -125,7 +124,29 @@ class _LoginPageState extends State<LoginPage> {
                             ),
                           ),
                         ),
-                        const SizedBox(height: 40),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(
+                              children: [
+                                Checkbox(
+                                    value: rememberUser,
+                                    onChanged: (value) {
+                                      setState(() {
+                                        rememberUser = value!;
+                                      });
+                                    }),
+                                const Padding(
+                                    padding: EdgeInsets.only(right: 0)),
+                                _buildGreyText("Remember me"),
+                              ],
+                            ),
+                            TextButton(
+                                onPressed: () {},
+                                child: _buildGreyText("Forgot password?"))
+                          ],
+                        ),
+                        const SizedBox(height: 20),
                         InkWell(
                           onTap: () {
                             Navigator.of(context).push(MaterialPageRoute(
