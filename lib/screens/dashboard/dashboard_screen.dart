@@ -202,7 +202,9 @@ class DashboardScreen extends StatelessWidget {
       decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(20),
-          boxShadow: const [BoxShadow(blurRadius: 3)]),
+          boxShadow: [BoxShadow(
+              color: Colors.indigo.shade200.withOpacity(.2),
+              blurRadius: 10)]),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

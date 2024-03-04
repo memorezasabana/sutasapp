@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:sutasapp/screens/dashboard/dashboard_screen.dart';
 
 void main() {
-  runApp(LoginPage());
+  runApp(const LoginPage());
 }
 
 class LoginPage extends StatefulWidget {
-  LoginPage({super.key});
+  const LoginPage({super.key});
 
   @override
   State<LoginPage> createState() => _LoginPageState();
