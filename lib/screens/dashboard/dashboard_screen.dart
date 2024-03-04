@@ -58,7 +58,7 @@ class DashboardScreen extends StatelessWidget {
                       "Ayo tanggap bencana!",
                     ),
                     trailing: SizedBox(
-                      height: 70,
+                      height: 75,
                       child: Image.asset("assets/images/logo.png"),
                     )),
               ),
