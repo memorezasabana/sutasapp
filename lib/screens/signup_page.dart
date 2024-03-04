@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sutasapp/screens/dashboard/dashboard_screen.dart';
+import 'package:sutasapp/screens/login_page.dart';
 
 class SignPage extends StatefulWidget {
   const SignPage({super.key});
@@ -16,7 +16,8 @@ class _SignPageState extends State<SignPage> {
   late Size mediaSize;
 
   TextEditingController emailController = TextEditingController();
-
+  TextEditingController phoneController = TextEditingController(text: "+62");
+  TextEditingController nameController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
 
   @override
@@ -66,11 +67,35 @@ class _SignPageState extends State<SignPage> {
                         _buildGreyText("Please login with your information"),
                         const SizedBox(height: 20),
                         TextField(
-                          controller: emailController,
+                          controller: nameController,
                           decoration: InputDecoration(
-                            prefixIcon: const Icon(Icons.person),
-                            hintText: 'Masukkan Username Anda disini',
-                            labelText: 'Username',
+                            prefixIcon: const Icon(Icons.person_add_alt_1),
+                            hintText: 'Masukkan Nama Lengkap Anda disini',
+                            labelText: 'Nama Lengkap',
+                            contentPadding:
+                                const EdgeInsets.symmetric(horizontal: 20),
+                            focusedBorder: OutlineInputBorder(
+                              borderSide: const BorderSide(
+                                color: Colors.indigo,
+                              ),
+                              borderRadius: BorderRadius.circular(50.0),
+                            ),
+                            enabledBorder: OutlineInputBorder(
+                              borderSide: const BorderSide(
+                                color: Colors.black,
+                              ),
+                              borderRadius: BorderRadius.circular(50.0),
+                            ),
+                          ),
+                        ),
+                        SizedBox(height: 20),
+                        TextField(
+                          controller: phoneController,
+                          decoration: InputDecoration(
+                            prefixIcon:
+                                const Icon(Icons.phone_android_outlined),
+                            hintText: 'Masukkan Nomer Telpon Anda disini',
+                            labelText: 'No Telp',
                             contentPadding:
                                 const EdgeInsets.symmetric(horizontal: 20),
                             focusedBorder: OutlineInputBorder(
@@ -149,34 +174,12 @@ class _SignPageState extends State<SignPage> {
                             ),
                           ),
                         ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Row(
-                              children: [
-                                Checkbox(
-                                    value: rememberUser,
-                                    onChanged: (value) {
-                                      setState(() {
-                                        rememberUser = value!;
-                                      });
-                                    }),
-                                const Padding(
-                                    padding: EdgeInsets.only(right: 0)),
-                                _buildGreyText("Remember me"),
-                              ],
-                            ),
-                            TextButton(
-                                onPressed: () {},
-                                child: _buildGreyText("Forgot password?"))
-                          ],
-                        ),
                         const SizedBox(height: 20),
                         InkWell(
                           onTap: () {
                             Navigator.of(context).push(MaterialPageRoute(
                               builder: (context) {
-                                return const DashboardScreen();
+                                return const LoginPage();
                               },
                             ));
                           },
@@ -184,7 +187,7 @@ class _SignPageState extends State<SignPage> {
                             onPressed: () {
                               Navigator.of(context).push(MaterialPageRoute(
                                 builder: (context) {
-                                  return const DashboardScreen();
+                                  return const LoginPage();
                                 },
                               ));
                             },
@@ -196,33 +199,12 @@ class _SignPageState extends State<SignPage> {
                               minimumSize: const Size.fromHeight(60),
                             ),
                             child: const Text(
-                              "LOGIN",
+                              "SIGN UP",
                               style: TextStyle(color: Colors.white),
                             ),
                           ),
                         ),
                         SizedBox(height: 10),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text("Belum punya akun ? "),
-                            InkWell(
-                              onTap: () {
-                                Navigator.of(context).push(MaterialPageRoute(
-                                  builder: (context) {
-                                    return const SignPage();
-                                  },
-                                ));
-                              },
-                              child: const Text(
-                                "Sign Up",
-                                style: TextStyle(
-                                  color: Colors.indigo,
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
                       ],
                     ),
                   ),

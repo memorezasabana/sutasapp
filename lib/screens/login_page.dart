@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sutasapp/screens/dashboard/bottom_nav_bar.dart';
 import 'package:sutasapp/screens/dashboard/dashboard_screen.dart';
 import 'package:sutasapp/screens/signup_page.dart';
 
@@ -158,7 +159,7 @@ class _LoginPageState extends State<LoginPage> {
                           onTap: () {
                             Navigator.of(context).push(MaterialPageRoute(
                               builder: (context) {
-                                return const DashboardScreen();
+                                return const BottomBar();
                               },
                             ));
                           },
@@ -166,7 +167,7 @@ class _LoginPageState extends State<LoginPage> {
                             onPressed: () {
                               Navigator.of(context).push(MaterialPageRoute(
                                 builder: (context) {
-                                  return const DashboardScreen();
+                                  return const BottomBar();
                                 },
                               ));
                             },

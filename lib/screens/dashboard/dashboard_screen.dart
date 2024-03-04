@@ -15,22 +15,9 @@ class DashboardScreen extends StatelessWidget {
       extendBodyBehindAppBar: true,
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        // leading: Padding(
-        //   padding: const EdgeInsets.only(left: 15, right: 10),
-        //   child: Image.asset('assets/images/menu.png', color: Colors.white),
-        // ),
-        // title: const Text('Sutas App', style: TextStyle(color: Colors.white),),
-        // centerTitle: true,
-        // iconTheme: const IconThemeData(color: Colors.white, size: 30),
         backgroundColor: Colors.transparent,
         elevation: 0,
         scrolledUnderElevation: 0,
-        // actions: [
-        //   IconButton(
-        //     onPressed: () {},
-        //     icon: const Icon(Icons.notifications_outlined),
-        //   )
-        // ],
       ),
       body: Column(children: [
         Container(
@@ -202,9 +189,10 @@ class DashboardScreen extends StatelessWidget {
       decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(20),
-          boxShadow: [BoxShadow(
-              color: Colors.indigo.shade200.withOpacity(.2),
-              blurRadius: 10)]),
+          boxShadow: [
+            BoxShadow(
+                color: Colors.indigo.shade200.withOpacity(.2), blurRadius: 10)
+          ]),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
