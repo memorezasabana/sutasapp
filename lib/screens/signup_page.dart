@@ -16,7 +16,7 @@ class _SignPageState extends State<SignPage> {
   late Size mediaSize;
 
   TextEditingController emailController = TextEditingController();
-  TextEditingController phoneController = TextEditingController(text: "+62");
+  TextEditingController phoneController = TextEditingController(text: "(+62)");
   TextEditingController nameController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
 
@@ -34,7 +34,7 @@ class _SignPageState extends State<SignPage> {
         decoration: BoxDecoration(
           color: myColor,
           image: const DecorationImage(
-            image: AssetImage("assets/images/patung.png"),
+            image: AssetImage("assets/images/patung.jpg"),
             fit: BoxFit.cover,
           ),
         ),
@@ -205,6 +205,27 @@ class _SignPageState extends State<SignPage> {
                           ),
                         ),
                         SizedBox(height: 10),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text("Sudah punya akun ? "),
+                            InkWell(
+                              onTap: () {
+                                Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) {
+                                    return const LoginPage();
+                                  },
+                                ));
+                              },
+                              child: const Text(
+                                "Sign In",
+                                style: TextStyle(
+                                  color: Colors.indigo,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
                       ],
                     ),
                   ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sutasapp/screens/dashboard/dashboard_screen.dart';
+import 'package:sutasapp/screens/profile/profile_page.dart';
 
 class BottomBar extends StatelessWidget {
   const BottomBar({super.key});
@@ -32,5 +33,5 @@ class BottomBar extends StatelessWidget {
 
 class NavigationController extends GetxController {
   final Rx<int> selectedIndex = 0.obs;
-  final screens = [const DashboardScreen(), Container(), Container()];
+  final screens = [const DashboardScreen(), Container(), const ProfileScreen()];
 }
