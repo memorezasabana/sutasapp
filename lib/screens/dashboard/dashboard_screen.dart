@@ -58,8 +58,7 @@ class DashboardScreen extends StatelessWidget {
                       "Ayo tanggap bencana!",
                     ),
                     trailing: SizedBox(
-                      height: 50,
-                      width: 50,
+                      height: 70,
                       child: Image.asset("assets/images/logo.png"),
                     )),
               ),
@@ -157,7 +156,7 @@ class DashboardScreen extends StatelessWidget {
                     contentPadding: EdgeInsets.symmetric(horizontal: 15),
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(50))),
-                    hintText: "Cari berita yang anda inginkan disini",
+                    hintText: "Banjir di Surabaya hari ini",
                     prefixIcon: Icon(Icons.search),
                   ),
                 ),

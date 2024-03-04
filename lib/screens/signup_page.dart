@@ -16,7 +16,7 @@ class _SignPageState extends State<SignPage> {
   late Size mediaSize;
 
   TextEditingController emailController = TextEditingController();
-  TextEditingController phoneController = TextEditingController(text: "(+62)");
+  TextEditingController phoneController = TextEditingController(text: "(+62) ");
   TextEditingController nameController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
 
@@ -64,7 +64,7 @@ class _SignPageState extends State<SignPage> {
                               fontWeight: FontWeight.w500,
                               fontFamily: 'Product'),
                         ),
-                        _buildGreyText("Please login with your information"),
+                        _buildGreyText("Silakan buat akun anda"),
                         const SizedBox(height: 20),
                         TextField(
                           controller: nameController,
@@ -78,13 +78,13 @@ class _SignPageState extends State<SignPage> {
                               borderSide: const BorderSide(
                                 color: Colors.indigo,
                               ),
-                              borderRadius: BorderRadius.circular(50.0),
+                              borderRadius: BorderRadius.circular(15.0),
                             ),
                             enabledBorder: OutlineInputBorder(
                               borderSide: const BorderSide(
                                 color: Colors.black,
                               ),
-                              borderRadius: BorderRadius.circular(50.0),
+                              borderRadius: BorderRadius.circular(15.0),
                             ),
                           ),
                         ),
@@ -92,8 +92,7 @@ class _SignPageState extends State<SignPage> {
                         TextField(
                           controller: phoneController,
                           decoration: InputDecoration(
-                            prefixIcon:
-                                const Icon(Icons.phone_android_outlined),
+                            prefixIcon: const Icon(Icons.phone),
                             hintText: 'Masukkan Nomer Telpon Anda disini',
                             labelText: 'No Telp',
                             contentPadding:
@@ -102,13 +101,13 @@ class _SignPageState extends State<SignPage> {
                               borderSide: const BorderSide(
                                 color: Colors.indigo,
                               ),
-                              borderRadius: BorderRadius.circular(50.0),
+                              borderRadius: BorderRadius.circular(15.0),
                             ),
                             enabledBorder: OutlineInputBorder(
                               borderSide: const BorderSide(
                                 color: Colors.black,
                               ),
-                              borderRadius: BorderRadius.circular(50.0),
+                              borderRadius: BorderRadius.circular(15.0),
                             ),
                           ),
                         ),
@@ -125,13 +124,13 @@ class _SignPageState extends State<SignPage> {
                               borderSide: const BorderSide(
                                 color: Colors.indigo,
                               ),
-                              borderRadius: BorderRadius.circular(50.0),
+                              borderRadius: BorderRadius.circular(15.0),
                             ),
                             enabledBorder: OutlineInputBorder(
                               borderSide: const BorderSide(
                                 color: Colors.black,
                               ),
-                              borderRadius: BorderRadius.circular(50.0),
+                              borderRadius: BorderRadius.circular(15.0),
                             ),
                           ),
                         ),
@@ -164,13 +163,13 @@ class _SignPageState extends State<SignPage> {
                               borderSide: const BorderSide(
                                 color: Colors.indigo,
                               ),
-                              borderRadius: BorderRadius.circular(50.0),
+                              borderRadius: BorderRadius.circular(15.0),
                             ),
                             enabledBorder: OutlineInputBorder(
                               borderSide: const BorderSide(
                                 color: Colors.black,
                               ),
-                              borderRadius: BorderRadius.circular(50.0),
+                              borderRadius: BorderRadius.circular(15.0),
                             ),
                           ),
                         ),
@@ -192,7 +191,8 @@ class _SignPageState extends State<SignPage> {
                               ));
                             },
                             style: ElevatedButton.styleFrom(
-                              shape: const StadiumBorder(),
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15)),
                               backgroundColor: Colors.indigo,
                               elevation: 20,
                               shadowColor: myColor,

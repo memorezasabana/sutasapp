@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:sutasapp/screens/dashboard/bottom_nav_bar.dart';
-import 'package:sutasapp/screens/dashboard/dashboard_screen.dart';
 import 'package:sutasapp/screens/signup_page.dart';
 
 void main() {
@@ -69,7 +68,7 @@ class _LoginPageState extends State<LoginPage> {
                               fontWeight: FontWeight.w500,
                               fontFamily: 'Product'),
                         ),
-                        _buildGreyText("Please login with your information"),
+                        _buildGreyText("Silakan masuk dengan akun anda"),
                         const SizedBox(height: 20),
                         TextField(
                           controller: emailController,
@@ -83,13 +82,13 @@ class _LoginPageState extends State<LoginPage> {
                               borderSide: const BorderSide(
                                 color: Colors.indigo,
                               ),
-                              borderRadius: BorderRadius.circular(50.0),
+                              borderRadius: BorderRadius.circular(15.0),
                             ),
                             enabledBorder: OutlineInputBorder(
                               borderSide: const BorderSide(
                                 color: Colors.black,
                               ),
-                              borderRadius: BorderRadius.circular(50.0),
+                              borderRadius: BorderRadius.circular(15.0),
                             ),
                           ),
                         ),
@@ -122,13 +121,13 @@ class _LoginPageState extends State<LoginPage> {
                               borderSide: const BorderSide(
                                 color: Colors.indigo,
                               ),
-                              borderRadius: BorderRadius.circular(50.0),
+                              borderRadius: BorderRadius.circular(15.0),
                             ),
                             enabledBorder: OutlineInputBorder(
                               borderSide: const BorderSide(
                                 color: Colors.black,
                               ),
-                              borderRadius: BorderRadius.circular(50.0),
+                              borderRadius: BorderRadius.circular(15.0),
                             ),
                           ),
                         ),
@@ -139,6 +138,8 @@ class _LoginPageState extends State<LoginPage> {
                               children: [
                                 Checkbox(
                                     value: rememberUser,
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(5)),
                                     onChanged: (value) {
                                       setState(() {
                                         rememberUser = value!;
@@ -146,12 +147,12 @@ class _LoginPageState extends State<LoginPage> {
                                     }),
                                 const Padding(
                                     padding: EdgeInsets.only(right: 0)),
-                                _buildGreyText("Remember me"),
+                                _buildGreyText("Ingat saya"),
                               ],
                             ),
                             TextButton(
                                 onPressed: () {},
-                                child: _buildGreyText("Forgot password?"))
+                                child: _buildGreyText("Lupa password?"))
                           ],
                         ),
                         const SizedBox(height: 20),
@@ -172,7 +173,8 @@ class _LoginPageState extends State<LoginPage> {
                               ));
                             },
                             style: ElevatedButton.styleFrom(
-                              shape: const StadiumBorder(),
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15)),
                               backgroundColor: Colors.indigo,
                               elevation: 20,
                               shadowColor: myColor,

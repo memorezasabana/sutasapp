@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sutasapp/screens/login_page.dart';
 import 'package:sutasapp/screens/profile/profile_pic.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -21,11 +22,11 @@ class ProfileScreen extends StatelessWidget {
               margin: const EdgeInsets.only(right: 20, left: 20),
               decoration: BoxDecoration(
                   color: Colors.white,
-                  borderRadius: BorderRadius.circular(20),
+                  borderRadius: BorderRadius.circular(15),
                   boxShadow: [
                     BoxShadow(
                         offset: const Offset(0, 5),
-                        color: Colors.teal.shade400.withOpacity(.2),
+                        color: Colors.indigo.shade200.withOpacity(.2),
                         spreadRadius: 2,
                         blurRadius: 10)
                   ]),
@@ -39,19 +40,19 @@ class ProfileScreen extends StatelessWidget {
                 ),
                 leading: Icon(Icons.person_2_outlined),
                 tileColor: Colors.white,
-                trailing: Icon(Icons.keyboard_arrow_right),
+                trailing: Icon(Icons.keyboard_arrow_right_rounded),
               ),
             ),
-            SizedBox(height: 10),
+            SizedBox(height: 15),
             Container(
               margin: const EdgeInsets.only(right: 20, left: 20),
               decoration: BoxDecoration(
                   color: Colors.white,
-                  borderRadius: BorderRadius.circular(20),
+                  borderRadius: BorderRadius.circular(15),
                   boxShadow: [
                     BoxShadow(
                         offset: const Offset(0, 5),
-                        color: Colors.teal.shade400.withOpacity(.2),
+                        color: Colors.indigo.shade200.withOpacity(.2),
                         spreadRadius: 2,
                         blurRadius: 10)
                   ]),
@@ -65,19 +66,19 @@ class ProfileScreen extends StatelessWidget {
                 ),
                 leading: Icon(Icons.bookmark_outline_rounded),
                 tileColor: Colors.white,
-                trailing: Icon(Icons.keyboard_arrow_right),
+                trailing: Icon(Icons.keyboard_arrow_right_rounded),
               ),
             ),
-            SizedBox(height: 10),
+            SizedBox(height: 15),
             Container(
               margin: const EdgeInsets.only(right: 20, left: 20),
               decoration: BoxDecoration(
                   color: Colors.white,
-                  borderRadius: BorderRadius.circular(20),
+                  borderRadius: BorderRadius.circular(15),
                   boxShadow: [
                     BoxShadow(
                         offset: const Offset(0, 5),
-                        color: Colors.teal.shade400.withOpacity(.2),
+                        color: Colors.indigo.shade200.withOpacity(.2),
                         spreadRadius: 2,
                         blurRadius: 10)
                   ]),
@@ -91,33 +92,42 @@ class ProfileScreen extends StatelessWidget {
                 ),
                 leading: Icon(Icons.help_outline_rounded),
                 tileColor: Colors.white,
-                trailing: Icon(Icons.keyboard_arrow_right),
+                trailing: Icon(Icons.keyboard_arrow_right_rounded),
               ),
             ),
-            SizedBox(height: 10),
-            Container(
-              margin: const EdgeInsets.only(right: 20, left: 20),
-              decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(20),
-                  boxShadow: [
-                    BoxShadow(
-                        offset: const Offset(0, 5),
-                        color: Colors.teal.shade400.withOpacity(.2),
-                        spreadRadius: 2,
-                        blurRadius: 10)
-                  ]),
-              child: const ListTile(
-                title: Text(
-                  "Keluar",
-                  style: TextStyle(
-                      fontSize: 14,
-                      fontFamily: 'ProductSans',
-                      fontWeight: FontWeight.normal),
+            SizedBox(height: 15),
+            InkWell(
+              onTap: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) {
+                    return const LoginPage();
+                  },
+                ));
+              },
+              child: Container(
+                margin: const EdgeInsets.only(right: 20, left: 20),
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(15),
+                    boxShadow: [
+                      BoxShadow(
+                          offset: const Offset(0, 5),
+                          color: Colors.indigo.shade200.withOpacity(.2),
+                          spreadRadius: 2,
+                          blurRadius: 10)
+                    ]),
+                child: const ListTile(
+                  title: Text(
+                    "Keluar",
+                    style: TextStyle(
+                        fontSize: 14,
+                        fontFamily: 'ProductSans',
+                        fontWeight: FontWeight.normal),
+                  ),
+                  leading: Icon(Icons.logout_rounded),
+                  tileColor: Colors.white,
+                  trailing: Icon(Icons.keyboard_arrow_right_rounded),
                 ),
-                leading: Icon(Icons.logout_rounded),
-                tileColor: Colors.white,
-                trailing: Icon(Icons.keyboard_arrow_right),
               ),
             ),
           ],
