@@ -88,7 +88,7 @@ class _SignPageState extends State<SignPage> {
                             ),
                           ),
                         ),
-                        SizedBox(height: 20),
+                        const SizedBox(height: 20),
                         TextField(
                           controller: phoneController,
                           decoration: InputDecoration(
@@ -111,7 +111,7 @@ class _SignPageState extends State<SignPage> {
                             ),
                           ),
                         ),
-                        SizedBox(height: 20),
+                        const SizedBox(height: 20),
                         TextField(
                           controller: emailController,
                           decoration: InputDecoration(
@@ -204,11 +204,11 @@ class _SignPageState extends State<SignPage> {
                             ),
                           ),
                         ),
-                        SizedBox(height: 10),
+                        const SizedBox(height: 10),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text("Sudah punya akun ? "),
+                            const Text("Sudah punya akun ? "),
                             InkWell(
                               onTap: () {
                                 Navigator.of(context).push(MaterialPageRoute(

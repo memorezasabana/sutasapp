@@ -186,11 +186,11 @@ class _LoginPageState extends State<LoginPage> {
                             ),
                           ),
                         ),
-                        SizedBox(height: 10),
+                        const SizedBox(height: 10),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text("Belum punya akun ? "),
+                            const Text("Belum punya akun ? "),
                             InkWell(
                               onTap: () {
                                 Navigator.of(context).push(MaterialPageRoute(

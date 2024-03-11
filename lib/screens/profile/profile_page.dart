@@ -38,12 +38,12 @@ class ProfileScreen extends StatelessWidget {
                       fontFamily: 'ProductSans',
                       fontWeight: FontWeight.normal),
                 ),
-                leading: Icon(Icons.person_2_outlined),
+                leading: Icon(Icons.person_outline_rounded),
                 tileColor: Colors.white,
                 trailing: Icon(Icons.keyboard_arrow_right_rounded),
               ),
             ),
-            SizedBox(height: 15),
+            const SizedBox(height: 15),
             Container(
               margin: const EdgeInsets.only(right: 20, left: 20),
               decoration: BoxDecoration(
@@ -69,7 +69,7 @@ class ProfileScreen extends StatelessWidget {
                 trailing: Icon(Icons.keyboard_arrow_right_rounded),
               ),
             ),
-            SizedBox(height: 15),
+            const SizedBox(height: 15),
             Container(
               margin: const EdgeInsets.only(right: 20, left: 20),
               decoration: BoxDecoration(
@@ -95,7 +95,7 @@ class ProfileScreen extends StatelessWidget {
                 trailing: Icon(Icons.keyboard_arrow_right_rounded),
               ),
             ),
-            SizedBox(height: 15),
+            const SizedBox(height: 15),
             InkWell(
               onTap: () {
                 Navigator.of(context).push(MaterialPageRoute(

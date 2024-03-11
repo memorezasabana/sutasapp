@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class ProfilePic extends StatelessWidget {
   const ProfilePic({
@@ -33,7 +32,7 @@ class ProfilePic extends StatelessWidget {
                       ),
                       backgroundColor: Colors.indigo),
                   onPressed: () {},
-                  child: Icon(Icons.camera_alt)),
+                  child:const Icon(Icons.camera_alt)),
             ),
           )
         ],
