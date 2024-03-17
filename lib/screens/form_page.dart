@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'dart:io';
-import 'package:image_picker/image_picker.dart';
+// import 'package:image_picker/image_picker.dart';
 import 'package:sutasapp/screens/dashboard/bottom_nav_bar.dart';
 import 'package:sutasapp/screens/dashboard/dashboard_screen.dart';
-import 'package:image_picker/image_picker.dart';
+// import 'package:image_picker/image_picker.dart';
 
 class FormScreen extends StatefulWidget {
   static String routeName = "/form";
@@ -15,14 +15,14 @@ class FormScreen extends StatefulWidget {
 }
 
 class _FormScreenState extends State<FormScreen> {
-  File? image;
-  Future getImage() async {
-    final ImagePicker _picker = ImagePicker();
-    final XFile? imagePicked =
-        await _picker.pickImage(source: ImageSource.gallery);
-    image = File(imagePicked!.path);
-    setState(() {});
-  }
+  // File? image;
+  // Future getImage() async {
+  //   final ImagePicker _picker = ImagePicker();
+  //   final XFile? imagePicked =
+  //       await _picker.pickImage(source: ImageSource.gallery);
+  //   image = File(imagePicked!.path);
+  //   setState(() {});
+  // }
 
   final TextEditingController emailController = TextEditingController();
   final TextEditingController phoneController =
@@ -36,6 +36,7 @@ class _FormScreenState extends State<FormScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         title: const Text(
           "Lapor Bencana",
           style: TextStyle(color: Colors.white),
@@ -150,36 +151,36 @@ class _FormScreenState extends State<FormScreen> {
             }).toList(),
           ),
           const SizedBox(height: 20),
-          Column(
-            children: [
-              TextField(
-                readOnly: true,
-                controller: nameController,
-                decoration: InputDecoration(
-                  prefixIcon: FloatingActionButton(
-                    onPressed: () async {
-                      await getImage();
-                    },
-                    child: Icon(Icons.camera_alt),
-                  ),
-                  hintText: 'Masukkan Gambar dengan klik icon',
-                  contentPadding: const EdgeInsets.symmetric(horizontal: 20),
-                  border: OutlineInputBorder(
-                    borderSide: const BorderSide(
-                      color: Colors.black,
-                    ),
-                    borderRadius: BorderRadius.circular(15.0),
-                  ),
-                ),
-              ),
-              image != null
-                  ? Container(
-                      height: 200,
-                      width: MediaQuery.of(context).size.width,
-                      child: Image.file(image!))
-                  : Container(),
-            ],
-          ),
+          // Column(
+          //   children: [
+          //     TextField(
+          //       readOnly: true,
+          //       controller: nameController,
+          //       decoration: InputDecoration(
+          //         prefixIcon: FloatingActionButton(
+          //           onPressed: () async {
+          //             await getImage();
+          //           },
+          //           child: Icon(Icons.camera_alt),
+          //         ),
+          //         hintText: 'Masukkan Gambar dengan klik icon',
+          //         contentPadding: const EdgeInsets.symmetric(horizontal: 20),
+          //         border: OutlineInputBorder(
+          //           borderSide: const BorderSide(
+          //             color: Colors.black,
+          //           ),
+          //           borderRadius: BorderRadius.circular(15.0),
+          //         ),
+          //       ),
+          //     ),
+          //     image != null
+          //         ? Container(
+          //             height: 200,
+          //             width: MediaQuery.of(context).size.width,
+          //             child: Image.file(image!))
+          //         : Container(),
+          //   ],
+          // ),
           const SizedBox(height: 20),
           const SizedBox(height: 20),
           InkWell(

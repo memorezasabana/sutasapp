@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:sutasapp/screens/dashboard/widgets/item_news_feed.dart';
+import 'package:sutasapp/screens/form_page.dart';
 import 'package:sutasapp/screens/pages/page_kabar.dart';
 import 'package:sutasapp/screens/pages/page_kontak.dart';
 import 'package:sutasapp/screens/pages/page_lapor.dart';
-import 'package:sutasapp/screens/pages/page_panduan.dart';
+import 'package:sutasapp/screens/pages/Panduan/page_panduan.dart';
 import 'package:sutasapp/screens/pages/page_video.dart';
 
 class DashboardScreen extends StatelessWidget {
@@ -88,7 +89,7 @@ class DashboardScreen extends StatelessWidget {
                       onTap: () {
                         Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) {
-                            return const PageLapor();
+                            return FormScreen();
                           },
                         ));
                       },
@@ -128,13 +129,6 @@ class DashboardScreen extends StatelessWidget {
                       child: layanan("Kabar\nSutas", "assets/images/news.png"),
                     ),
                     InkWell(
-                      onTap: () {
-                        Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) {
-                            return const PageVideo();
-                          },
-                        ));
-                      },
                       child:
                           layanan("Video\nEdukasi", "assets/images/video.png"),
                     ),

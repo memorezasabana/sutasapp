@@ -28,8 +28,9 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  # video_player: ^2.1.12
   flutter_screenutil: ^5.9.0
-  image_picker: ^1.0.7
+  # image_picker: ^1.0.7
   path_provider: ^2.1.2
   get:
   flutter:
@@ -51,7 +52,7 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^3.0.1
-  image_picker: ^1.0.7
+  # image_picker: ^1.0.7
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -75,8 +76,25 @@ flutter:
     - assets/images/logo.png
     - assets/images/kabar1.jpeg
     - assets/images/kabar2.jpeg
+    - assets/images/kabar3.jpeg
+    - assets/images/kabar4.jpeg
     - assets/images/patung.jpg
     - assets/images/image.jpg
+    - assets/images/gempa.png
+    - assets/images/gempa2.png
+    - assets/images/gempa3.png
+    - assets/images/gempa4.png
+    - assets/images/tsunami.png
+    - assets/images/tsunami2.png
+    - assets/images/tsunami3.png
+    - assets/images/tsunami4.png
+    - assets/images/tsunami5.png
+    - assets/images/tsunami6.png
+    - assets/images/berapi.png
+    - assets/images/berapi2.png
+    - assets/images/berapi3.png
+    - assets/images/berapi4.png
+    - assets/video.mp4
 
     # - images/a_dot_ham.jpeg
 
