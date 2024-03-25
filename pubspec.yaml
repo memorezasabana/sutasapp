@@ -29,18 +29,22 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   # video_player: ^2.1.12
-  flutter_screenutil: ^5.9.0
-  # image_picker: ^1.0.7
-  path_provider: ^2.1.2
+  
   get:
   flutter:
     sdk: flutter
+
+  image_picker: ^1.0.7
+  flutter_screenutil: ^5.9.0
+  path_provider: ^2.1.2
 
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   flutter_svg: ^2.0.9
+  flutter_animated_icons: ^1.0.1
+  lottie: ^1.4.3
 
 dev_dependencies:
   flutter_test:
@@ -52,7 +56,6 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^3.0.1
-  # image_picker: ^1.0.7
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -95,6 +98,7 @@ flutter:
     - assets/images/berapi3.png
     - assets/images/berapi4.png
     - assets/video.mp4
+    - assets/lottie/success.json
 
     # - images/a_dot_ham.jpeg
 

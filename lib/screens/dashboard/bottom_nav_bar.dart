@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:sutasapp/screens/dashboard/dashboard_screen.dart';
 import 'package:sutasapp/screens/form_page.dart';
 import 'package:sutasapp/screens/profile/profile_page.dart';
+import 'package:flutter_animated_icons/flutter_animated_icons.dart';
 
 class BottomBar extends StatelessWidget {
   const BottomBar({super.key});
@@ -32,11 +33,22 @@ class BottomBar extends StatelessWidget {
               onDestinationSelected: (index) =>
                   controller.selectedIndex.value = index,
               destinations: const [
-                NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
                 NavigationDestination(
-                    icon: Icon(Icons.report), label: 'Lapor Bencana'),
+                  icon: Icon(Icons.home, color: Colors.grey),
+                  selectedIcon: Icon(Icons.home, color: Colors.indigo),
+                  label: 'Home',
+                ),
                 NavigationDestination(
-                    icon: Icon(Icons.person_2_rounded), label: 'Profile'),
+                  icon: Icon(Icons.report, color: Colors.grey),
+                  selectedIcon: Icon(Icons.report, color: Colors.indigo),
+                  label: 'Lapor Bencana',
+                ),
+                NavigationDestination(
+                  icon: Icon(Icons.person_2_rounded, color: Colors.grey),
+                  selectedIcon:
+                      Icon(Icons.person_2_rounded, color: Colors.indigo),
+                  label: 'Profile',
+                ),
               ],
             ),
           ),
@@ -49,5 +61,9 @@ class BottomBar extends StatelessWidget {
 
 class NavigationController extends GetxController {
   final Rx<int> selectedIndex = 0.obs;
-  final screens = [const DashboardScreen(), FormScreen(), const ProfileScreen()];
+  final screens = [
+    const DashboardScreen(),
+    FormScreen(),
+    const ProfileScreen()
+  ];
 }
